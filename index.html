@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wound Vision - AR Wound Follow-up and Measurement</title>
+    <meta name="description" content="Wound Vision helps clinicians record AR video, depth data, patient notes, and frame-level wound measurements for follow-up documentation.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="nav">
+            <a class="brand" href="index.html" aria-label="Wound Vision home">
+                <img src="assets/woundtruth2-icon.png" alt="">
+                <span>Wound Vision</span>
+            </a>
+            <div class="nav-links">
+                <a class="nav-link" href="support.html">Support</a>
+                <a class="nav-link" href="privacy.html">Privacy</a>
+                <div class="lang-switch" aria-label="Language">
+                    <button class="lang-btn active" data-lang-button="en" onclick="setLanguage('en')">EN</button>
+                    <button class="lang-btn" data-lang-button="zh" onclick="setLanguage('zh')">中文</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="page">
+        <section class="hero">
+            <div data-lang-panel="en" class="active">
+                <p class="eyebrow">Clinical wound follow-up</p>
+                <h1>Record the wound, preserve the context.</h1>
+                <p class="lead">Wound Vision is an iPhone tool for clinicians to capture AR video, depth information, patient records, notes, and frame-level measurements during wound follow-up.</p>
+                <div class="actions">
+                    <a class="button primary" href="support.html">Get support</a>
+                    <a class="button secondary" href="privacy.html">Read privacy policy</a>
+                </div>
+            </div>
+
+            <div data-lang-panel="zh">
+                <p class="eyebrow">创面随访辅助工具</p>
+                <h1>记录创面，也保留空间上下文。</h1>
+                <p class="lead">创视迹面向临床创面随访，帮助医生在 iPhone 上采集 AR 录像、深度信息、患者档案、备注，并对任意帧进行长度、曲线、面积和剖面测量。</p>
+                <div class="actions">
+                    <a class="button primary" href="support.html">查看支持</a>
+                    <a class="button secondary" href="privacy.html">隐私政策</a>
+                </div>
+            </div>
+
+            <aside class="hero-card" aria-label="Wound Vision measurement preview">
+                <div class="app-visual">
+                    <img class="app-icon-large" src="assets/woundtruth2-icon.png" alt="">
+                    <div class="ruler" aria-hidden="true">
+                        <span>0 cm</span>
+                        <span>15 cm</span>
+                        <span>30 cm</span>
+                    </div>
+                    <div class="measurement-panel">
+                        <div class="measurement-row">
+                            <span>Frame measurement</span>
+                            <strong>8.6 cm</strong>
+                        </div>
+                        <div class="measurement-row">
+                            <span>Depth profile</span>
+                            <span class="measure-tag">AR + Depth</span>
+                        </div>
+                        <div class="measurement-row">
+                            <span>Patient note</span>
+                            <span>Follow-up ready</span>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </section>
+
+        <section class="section" id="features">
+            <div class="section-head">
+                <div data-lang-panel="en" class="active">
+                    <h2>Designed for clinical follow-up, not casual snapshots.</h2>
+                </div>
+                <div data-lang-panel="zh">
+                    <h2>为临床随访设计，不只是拍一张照片。</h2>
+                </div>
+                <p data-lang-panel="en" class="active">Each recording can include patient context, frame metadata, depth maps, camera information, measurements, notes, and exportable archives.</p>
+                <p data-lang-panel="zh">每次录制都可以包含患者信息、逐帧元数据、深度图、相机信息、测量结果、备注，以及可导出的归档数据包。</p>
+            </div>
+
+            <div class="grid">
+                <article class="card">
+                    <h3 data-lang-panel="en" class="active">AR video and depth capture</h3>
+                    <h3 data-lang-panel="zh">AR 录像与深度采集</h3>
+                    <p data-lang-panel="en" class="active">Capture color frames, depth data, camera intrinsics, transforms, and display mapping information for later review and measurement.</p>
+                    <p data-lang-panel="zh">记录彩色图像、深度数据、相机内参、位姿变换和显示映射信息，为后续回看和测量保留依据。</p>
+                </article>
+
+                <article class="card">
+                    <h3 data-lang-panel="en" class="active">Patient and record notes</h3>
+                    <h3 data-lang-panel="zh">患者与录像备注</h3>
+                    <p data-lang-panel="en" class="active">Add notes at the patient, recording, and measurement levels to document wound history and dressing-change progress.</p>
+                    <p data-lang-panel="zh">支持在患者、单次录像、单项测量三个层级添加备注，便于记录病因、换药进展和测量说明。</p>
+                </article>
+
+                <article class="card">
+                    <h3 data-lang-panel="en" class="active">Frame-level measurements</h3>
+                    <h3 data-lang-panel="zh">单帧精细测量</h3>
+                    <p data-lang-panel="en" class="active">Measure line length, curved edges, area, and depth profile on selected frames with visual overlays for review.</p>
+                    <p data-lang-panel="zh">在选定帧上进行长度、曲线、面积和剖面测量，并通过可视化标注辅助复核。</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-head">
+                <div data-lang-panel="en" class="active">
+                    <h2>Data package first.</h2>
+                </div>
+                <div data-lang-panel="zh">
+                    <h2>以完整数据包为核心。</h2>
+                </div>
+                <p data-lang-panel="en" class="active">Wound Vision is built around local control and exportable records, so clinicians can archive cases or transfer them for consultation.</p>
+                <p data-lang-panel="zh">创视迹以本地控制和可导出档案为核心，方便医生归档病例，也方便会诊时传输数据。</p>
+            </div>
+
+            <div class="card spec-list">
+                <div class="spec">
+                    <strong data-lang-panel="en" class="active">Patient archive</strong>
+                    <strong data-lang-panel="zh">患者档案</strong>
+                    <span data-lang-panel="en" class="active">Name, patient ID, optional hospital and department, patient-level notes, and linked recordings.</span>
+                    <span data-lang-panel="zh">包含姓名、患者 ID、可选医院与科室、患者层级备注，以及关联录像。</span>
+                </div>
+                <div class="spec">
+                    <strong data-lang-panel="en" class="active">Recording package</strong>
+                    <strong data-lang-panel="zh">录像数据包</strong>
+                    <span data-lang-panel="en" class="active">Video frames, metadata, camera information, depth files, ruler calibration, and record notes.</span>
+                    <span data-lang-panel="zh">包含视频帧、元数据、相机信息、深度文件、标尺校准和录像备注。</span>
+                </div>
+                <div class="spec">
+                    <strong data-lang-panel="en" class="active">Measurement history</strong>
+                    <strong data-lang-panel="zh">测量历史</strong>
+                    <span data-lang-panel="en" class="active">Line, curve, area, and profile measurements can be reviewed, named, annotated, and jumped to from the playback timeline.</span>
+                    <span data-lang-panel="zh">长度、曲线、面积和剖面测量可回看、命名、备注，并能从回放时间线快速跳转。</span>
+                </div>
+            </div>
+
+            <div class="callout active" data-lang-panel="en">
+                Wound Vision is a documentation and measurement aid. It is not intended to replace clinical judgment, diagnosis, or treatment decisions.
+            </div>
+            <div class="callout" data-lang-panel="zh">
+                创视迹是临床记录与测量辅助工具，不能替代医生的诊断、判断或治疗决策。
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <span>© 2026 Wound Vision. Developer: zhituo.xia</span>
+            <nav>
+                <a href="support.html">Support</a>
+                <a href="privacy.html">Privacy</a>
+                <a href="mailto:xiazhituo@gmail.com">xiazhituo@gmail.com</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
