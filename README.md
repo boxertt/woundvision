@@ -1,6 +1,6 @@
-# Wound Vision Website
+# WoundTruth Website
 
-Static App Store review website for Wound Vision / 创视迹.
+Static App Store review website for WoundTruth / 创视迹.
 
 ## Pages
 

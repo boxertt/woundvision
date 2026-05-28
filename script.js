@@ -1,6 +1,6 @@
 function setLanguage(language) {
     document.documentElement.lang = language === "zh" ? "zh-CN" : "en";
-    const brandName = language === "zh" ? "创视迹" : "Wound Vision";
+    const brandName = language === "zh" ? "创视迹" : "WoundTruth";
 
     document.querySelectorAll("[data-brand-name]").forEach((element) => {
         element.textContent = brandName;
