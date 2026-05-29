@@ -32,7 +32,8 @@
                 <h1>Record the wound, preserve the context.</h1>
                 <p class="lead">WoundTruth is an iPhone tool for clinicians to capture AR video, depth information, patient records, notes, and frame-level measurements during wound follow-up.</p>
                 <div class="actions">
-                    <a class="button primary" href="support.html">Get support</a>
+                    <a class="button primary" href="#tutorial">Read tutorial</a>
+                    <a class="button secondary" href="support.html">Get support</a>
                     <a class="button secondary" href="privacy.html">Read privacy policy</a>
                 </div>
             </div>
@@ -42,7 +43,8 @@
                 <h1>记录创面，也保留空间上下文。</h1>
                 <p class="lead">创视迹面向临床创面随访，帮助医生在 iPhone 上采集 AR 录像、深度信息、患者档案、备注，并对任意帧进行长度、曲线、面积和剖面测量。</p>
                 <div class="actions">
-                    <a class="button primary" href="support.html">查看支持</a>
+                    <a class="button primary" href="#tutorial">查看教程</a>
+                    <a class="button secondary" href="support.html">查看支持</a>
                     <a class="button secondary" href="privacy.html">隐私政策</a>
                 </div>
             </div>
@@ -71,6 +73,187 @@
                     </div>
                 </div>
             </aside>
+        </section>
+
+        <section class="section tutorial" id="tutorial">
+            <div class="section-head">
+                <div data-lang-panel="en" class="active">
+                    <p class="eyebrow">Tutorial</p>
+                    <h2>How to use WoundTruth.</h2>
+                </div>
+                <div data-lang-panel="zh">
+                    <p class="eyebrow">使用教程</p>
+                    <h2>如何使用创视迹。</h2>
+                </div>
+                <p data-lang-panel="en" class="active">Start with the disclaimer, then follow the patient, recording, playback, measurement, notes, and archive workflows below.</p>
+                <p data-lang-panel="zh">请先阅读免责声明，然后按病人档案、录像、回看测量、备注和导入导出流程操作。</p>
+            </div>
+
+            <div class="tutorial-stack active" data-lang-panel="en">
+                <article class="guide-card warning">
+                    <span class="step-index">01</span>
+                    <div>
+                        <h3>Disclaimer</h3>
+                        <p>WoundTruth is a wound documentation and measurement aid for clinicians. It does not provide diagnosis, treatment recommendations, treatment decisions, or automated medical conclusions.</p>
+                        <p>All measurement results are for clinical reference only. Accuracy may be affected by device depth capability, camera distance, lighting, reflection, occlusion, motion blur, wound boundary selection, and whether ruler points are placed on the same physical plane as the measured wound area. Qualified healthcare professionals must use their own clinical judgment.</p>
+                    </div>
+                </article>
+
+                <article class="guide-card">
+                    <span class="step-index">02</span>
+                    <div>
+                        <h3>Device and data requirements</h3>
+                        <p>Recording uses ARKit world tracking and depth data. A device with ARKit support and scene depth/LiDAR capability is recommended. Unsupported devices show an in-app message.</p>
+                        <p>The app is local-first. Patient records, frames, depth maps, camera metadata, measurements, notes, timestamps, and verification hashes stay on the device unless the user exports a record package.</p>
+                    </div>
+                </article>
+
+                <article class="guide-card">
+                    <span class="step-index">03</span>
+                    <div>
+                        <h3>Patient profile</h3>
+                        <ol>
+                            <li>Open Settings and set the default hospital and department if needed. These fields are optional.</li>
+                            <li>Create a new patient profile from the patient list.</li>
+                            <li>Enter the patient name. Patient ID is optional; if it is left empty, the app generates a timestamp-based ID.</li>
+                            <li>Fill optional hospital, department, and patient notes.</li>
+                            <li>Long-press a patient item to edit patient information later.</li>
+                        </ol>
+                    </div>
+                </article>
+
+                <article class="guide-card">
+                    <span class="step-index">04</span>
+                    <div>
+                        <h3>Recording</h3>
+                        <ol>
+                            <li>Open a patient profile and start a new recording.</li>
+                            <li>Drag ruler points A-B and C-D to the reference area before recording.</li>
+                            <li>Place A-B and C-D on the same physical plane as the wound or measured object, for example on the same arm surface.</li>
+                            <li>The A-B and C-D lengths are used to display the two-axis ruler scale.</li>
+                            <li>Tap the record button and keep the camera stable. Avoid fast motion, poor lighting, strong reflection, and occlusion.</li>
+                        </ol>
+                    </div>
+                </article>
+
+                <article class="guide-card">
+                    <span class="step-index">05</span>
+                    <div>
+                        <h3>Playback and measurements</h3>
+                        <ol>
+                            <li>Open a recorded video and scrub the timeline to select a frame.</li>
+                            <li>Use the ruler overlay to understand the approximate scale of the current frame.</li>
+                            <li>Tap the measurement button and choose Length, Curve, Area, or Depth/Profile.</li>
+                            <li>Length measures the straight distance between two endpoints on the current frame.</li>
+                            <li>Curve follows a curved wound edge; tap Finish to calculate the curve length.</li>
+                            <li>Area follows the wound boundary; tap Finish to calculate the enclosed area.</li>
+                            <li>Depth/Profile places a line across the target area to view surface variation.</li>
+                            <li>After a measurement is completed, add a name or note if needed.</li>
+                            <li>Tap the measurement list in the lower-right corner to review all measurements and jump to the frame where a measurement was created.</li>
+                        </ol>
+                    </div>
+                </article>
+
+                <article class="guide-card">
+                    <span class="step-index">06</span>
+                    <div>
+                        <h3>Depth overlay, capture time, and hash verification</h3>
+                        <p>In playback, the user can toggle depth overlay, capture time, and HASH verification information. The depth overlay helps reviewers understand available depth data. Capture time and HASH values help verify that exported data matches the recorded data.</p>
+                    </div>
+                </article>
+
+                <article class="guide-card">
+                    <span class="step-index">07</span>
+                    <div>
+                        <h3>Notes and archives</h3>
+                        <p>Notes can be added at the patient, recording, and measurement levels. Recording notes can describe follow-up status, for example “wound condition after the third dressing change.”</p>
+                        <p>The app supports exporting and importing compatible record packages for archiving, computer transfer, or clinician consultation. Exported files may contain patient-identifiable information, so users should choose a secure destination.</p>
+                    </div>
+                </article>
+            </div>
+
+            <div class="tutorial-stack" data-lang-panel="zh">
+                <article class="guide-card warning">
+                    <span class="step-index">01</span>
+                    <div>
+                        <h3>免责声明</h3>
+                        <p>WoundTruth / 创视迹是面向医护人员的创面记录与测量辅助工具，不提供诊断、治疗建议、治疗决策或自动化医疗结论。</p>
+                        <p>所有测量结果仅供临床参考。测量精度可能受到设备深度能力、拍摄距离、光照、反光、遮挡、运动模糊、创面边界选择，以及标尺点是否与创面位于同一物理平面等因素影响。具备资质的医护人员需要结合实际临床情况自行判断。</p>
+                    </div>
+                </article>
+
+                <article class="guide-card">
+                    <span class="step-index">02</span>
+                    <div>
+                        <h3>设备与数据要求</h3>
+                        <p>录像功能基于 ARKit 世界追踪和深度数据。建议使用支持 ARKit 与 scene depth/LiDAR 深度能力的设备。不支持的设备会在应用内显示明确提示。</p>
+                        <p>应用采用本地优先设计。患者档案、图像帧、深度图、相机元数据、测量结果、备注、拍摄时间和 HASH 信息默认保存在本机；只有用户主动导出数据包时，数据才会离开设备。</p>
+                    </div>
+                </article>
+
+                <article class="guide-card">
+                    <span class="step-index">03</span>
+                    <div>
+                        <h3>病人档案</h3>
+                        <ol>
+                            <li>打开设置，如有需要，填写默认医院和默认科室。这两项不是必填项。</li>
+                            <li>回到患者列表，新建病人档案。</li>
+                            <li>填写患者姓名。患者 ID 不是必填项；如果留空，应用会根据当前时间戳自动生成。</li>
+                            <li>可继续填写医院、科室和患者备注等可选信息。</li>
+                            <li>在患者列表中长按对应患者，可以后续编辑病人信息。</li>
+                        </ol>
+                    </div>
+                </article>
+
+                <article class="guide-card">
+                    <span class="step-index">04</span>
+                    <div>
+                        <h3>录像</h3>
+                        <ol>
+                            <li>进入某个病人档案，开始新建录像。</li>
+                            <li>录像前拖动 A-B、C-D 四个标尺点到指定参考位置。</li>
+                            <li>A-B 和 C-D 应尽量放在与创面或待测物体相同的物理平面上，例如都放在同一段胳膊表面。</li>
+                            <li>A-B 和 C-D 的长度会用于显示横向与纵向两个轴的标尺。</li>
+                            <li>点击录像按钮后保持手机稳定，避免快速移动、光照不足、强反光和遮挡。</li>
+                        </ol>
+                    </div>
+                </article>
+
+                <article class="guide-card">
+                    <span class="step-index">05</span>
+                    <div>
+                        <h3>回看与测量</h3>
+                        <ol>
+                            <li>打开已录制的视频，拖动时间轴选择需要查看或测量的某一帧。</li>
+                            <li>使用默认标尺叠加层观察当前帧的大致尺度。</li>
+                            <li>点击测量按钮，选择直线、曲线、面积或深度/剖面。</li>
+                            <li>直线用于测量当前帧两个端点之间的直线距离。</li>
+                            <li>曲线用于沿创面边缘连续点选或拖动，完成后点击完成按钮计算曲线长度。</li>
+                            <li>面积用于沿创面边界连续点选或拖动，完成后点击完成按钮计算封闭区域面积。</li>
+                            <li>深度/剖面用于在目标区域放置剖面线，查看深度曲线和表面起伏。</li>
+                            <li>完成测量后，可给测量添加名称或备注。</li>
+                            <li>点击右下角测量列表，可以查看全部测量项，并跳转到对应测量所在的帧。</li>
+                        </ol>
+                    </div>
+                </article>
+
+                <article class="guide-card">
+                    <span class="step-index">06</span>
+                    <div>
+                        <h3>深度图、拍摄时间与 HASH 防伪信息</h3>
+                        <p>回看界面支持切换深度图叠加、拍摄时间和 HASH 校验信息。深度图用于帮助理解当前帧可用的深度数据；拍摄时间和 HASH 值用于辅助确认导出数据与原始记录是否一致。</p>
+                    </div>
+                </article>
+
+                <article class="guide-card">
+                    <span class="step-index">07</span>
+                    <div>
+                        <h3>备注与导入导出</h3>
+                        <p>应用支持病人、录像、测量三个层级的备注。录像备注可以记录某次随访或换药后的创面状态，例如“第三次换药后伤口状况”。</p>
+                        <p>应用支持导出和导入兼容的数据包，用于电脑归档、离线备份或医生之间会诊传输。导出文件可能包含可识别患者身份的信息，用户需要自行选择安全、合规的保存或传输方式。</p>
+                    </div>
+                </article>
+            </div>
         </section>
 
         <section class="section" id="features">

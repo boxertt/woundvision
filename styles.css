@@ -423,6 +423,76 @@ h2 {
     color: var(--ink);
 }
 
+.tutorial {
+    scroll-margin-top: 96px;
+}
+
+.tutorial-stack {
+    display: none;
+    gap: 16px;
+}
+
+.tutorial-stack.active {
+    display: grid;
+}
+
+.guide-card {
+    display: grid;
+    grid-template-columns: 64px 1fr;
+    gap: 18px;
+    padding: 24px;
+    border-radius: var(--radius-lg);
+    background: rgba(255, 255, 255, 0.80);
+    border: 1px solid rgba(255, 255, 255, 0.74);
+    box-shadow: 0 18px 52px rgba(0, 80, 107, 0.10);
+}
+
+.guide-card.warning {
+    background: linear-gradient(135deg, rgba(245, 181, 68, 0.20), rgba(255, 255, 255, 0.84));
+    border-color: rgba(245, 181, 68, 0.34);
+}
+
+.step-index {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 54px;
+    height: 54px;
+    border-radius: 18px;
+    background: var(--ink);
+    color: white;
+    font-weight: 900;
+    letter-spacing: -0.04em;
+}
+
+.guide-card h3 {
+    margin: 0 0 8px;
+    font-size: 22px;
+    letter-spacing: -0.03em;
+}
+
+.guide-card p,
+.guide-card li {
+    color: var(--muted);
+}
+
+.guide-card p {
+    margin: 0 0 10px;
+}
+
+.guide-card p:last-child {
+    margin-bottom: 0;
+}
+
+.guide-card ol {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.guide-card li + li {
+    margin-top: 6px;
+}
+
 .document {
     max-width: 880px;
     margin: 0 auto;
@@ -507,6 +577,10 @@ h2 {
     display: block;
 }
 
+[data-lang-panel].tutorial-stack.active {
+    display: grid;
+}
+
 @media (max-width: 880px) {
     .hero,
     .two-column {
@@ -529,6 +603,10 @@ h2 {
     .spec {
         grid-template-columns: 1fr;
         gap: 4px;
+    }
+
+    .guide-card {
+        grid-template-columns: 1fr;
     }
 }
 
