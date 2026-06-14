@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WoundTruth - AR Wound Follow-up and Measurement</title>
-    <meta name="description" content="WoundTruth helps clinicians record AR video, depth data, patient notes, and frame-level wound measurements for follow-up documentation.">
+    <title>WoundTruth - User Guide for AR Wound Documentation</title>
+    <meta name="description" content="Official WoundTruth user guide: clinical wound documentation, AR video, depth data, frame-level measurements, notes, import/export, privacy, and disclaimer.">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -14,333 +14,294 @@
                 <img src="assets/woundtruth2-icon.png" alt="">
                 <span data-brand-name>WoundTruth</span>
             </a>
-            <div class="nav-links">
+            <nav class="nav-links" aria-label="Primary navigation">
+                <a class="nav-link" href="#guide" data-lang-panel="en">Guide</a>
+                <a class="nav-link" href="#guide" data-lang-panel="zh">教程</a>
+                <a class="nav-link" href="#measurements" data-lang-panel="en">Measurements</a>
+                <a class="nav-link" href="#measurements" data-lang-panel="zh">测量</a>
                 <a class="nav-link" href="support.html">Support</a>
                 <a class="nav-link" href="privacy.html">Privacy</a>
                 <div class="lang-switch" aria-label="Language">
                     <button class="lang-btn active" data-lang-button="en" onclick="setLanguage('en')">EN</button>
                     <button class="lang-btn" data-lang-button="zh" onclick="setLanguage('zh')">中文</button>
                 </div>
-            </div>
+            </nav>
         </div>
     </header>
 
-    <main class="page">
-        <section class="hero">
+    <main>
+        <section class="hero section-shell">
+            <div class="hero-copy">
+                <div data-lang-panel="en" class="active">
+                    <p class="eyebrow">User Guide · Clinical Documentation Aid</p>
+                    <h1>Record wound follow-up with AR video, depth, notes, and frame-level measurements.</h1>
+                    <p class="lead">WoundTruth is a local-first iOS app for clinicians. It helps create patient profiles, capture AR wound videos, review selected frames, measure length, curve, area, and depth profile, then export complete local record packages.</p>
+                </div>
+                <div data-lang-panel="zh">
+                    <p class="eyebrow">用户指导书 · 临床记录辅助工具</p>
+                    <h1>用 AR 录像、深度图、备注和单帧测量，持续记录创面变化。</h1>
+                    <p class="lead">创视迹是一款本地优先的 iOS 应用，面向医护人员，用于建立患者档案、采集 AR 创面视频、回看关键帧、完成长度、曲线、面积和剖面测量，并导出完整本地记录数据包。</p>
+                </div>
+
+                <div class="hero-actions">
+                    <a class="button primary" href="#guide" data-lang-panel="en">Start the guide</a>
+                    <a class="button primary" href="#guide" data-lang-panel="zh">开始阅读教程</a>
+                    <a class="button secondary" href="#disclaimer" data-lang-panel="en">Read disclaimer</a>
+                    <a class="button secondary" href="#disclaimer" data-lang-panel="zh">查看免责声明</a>
+                </div>
+
+                <div class="hero-stats" aria-label="Key capabilities">
+                    <div><strong>4</strong><span data-lang-panel="en" class="active">measurement types</span><span data-lang-panel="zh">类测量</span></div>
+                    <div><strong>3</strong><span data-lang-panel="en" class="active">note levels</span><span data-lang-panel="zh">级备注</span></div>
+                    <div><strong>Local</strong><span data-lang-panel="en" class="active">first records</span><span data-lang-panel="zh">优先保存</span></div>
+                </div>
+            </div>
+
+            <div class="hero-showcase" aria-label="App screenshots preview">
+                <div class="phone-frame primary-shot">
+                    <img src="assets/guide-images/8_review_display.png" alt="Playback interface with timeline and ruler">
+                </div>
+                <div class="floating-card card-a">
+                    <span data-lang-panel="en" class="active">Frame review</span>
+                    <span data-lang-panel="zh">逐帧回看</span>
+                    <strong>A-B / C-D</strong>
+                </div>
+                <div class="floating-card card-b">
+                    <span data-lang-panel="en" class="active">Depth + Hash</span>
+                    <span data-lang-panel="zh">深度图 + HASH</span>
+                    <strong>Verify</strong>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-shell notice" id="disclaimer">
+            <div class="notice-icon">!</div>
             <div data-lang-panel="en" class="active">
-                <p class="eyebrow">Clinical wound follow-up</p>
-                <h1>Record the wound, preserve the context.</h1>
-                <p class="lead">WoundTruth is an iPhone tool for clinicians to capture AR video, depth information, patient records, notes, and frame-level measurements during wound follow-up.</p>
-                <div class="actions">
-                    <a class="button primary" href="#tutorial">Read tutorial</a>
-                    <a class="button secondary" href="support.html">Get support</a>
-                    <a class="button secondary" href="privacy.html">Read privacy policy</a>
-                </div>
+                <p class="eyebrow compact">Important Disclaimer</p>
+                <h2>Documentation aid only. Not diagnosis, treatment, or guaranteed measurement.</h2>
+                <p>WoundTruth does not provide diagnosis, treatment recommendations, treatment decisions, automated medical conclusions, emergency medical advice, or guaranteed accuracy. Measurements may be affected by device depth capability, capture distance, lighting, reflection, occlusion, motion blur, wound boundary selection, and whether A-B / C-D reference lines are placed on the same physical plane as the measured wound area. Qualified healthcare professionals must use clinical judgment.</p>
             </div>
-
             <div data-lang-panel="zh">
-                <p class="eyebrow">创面随访辅助工具</p>
-                <h1>记录创面，也保留空间上下文。</h1>
-                <p class="lead">创视迹面向临床创面随访，帮助医生在 iPhone 上采集 AR 录像、深度信息、患者档案、备注，并对任意帧进行长度、曲线、面积和剖面测量。</p>
-                <div class="actions">
-                    <a class="button primary" href="#tutorial">查看教程</a>
-                    <a class="button secondary" href="support.html">查看支持</a>
-                    <a class="button secondary" href="privacy.html">隐私政策</a>
-                </div>
+                <p class="eyebrow compact">重要免责声明</p>
+                <h2>仅用于记录与测量辅助，不提供诊断、治疗建议或精度保证。</h2>
+                <p>创视迹不提供诊断、治疗建议、治疗决策、自动化医疗结论、急救指导或固定精度保证。测量结果可能受到设备深度能力、拍摄距离、光照、反光、遮挡、运动模糊、创面边界选择，以及 A-B / C-D 参考线是否与创面处于同一物理平面等因素影响。医护人员应结合临床情况自行判断。</p>
             </div>
-
-            <aside class="hero-card" aria-label="WoundTruth measurement preview">
-                <div class="app-visual">
-                    <img class="app-icon-large" src="assets/woundtruth2-icon.png" alt="">
-                    <div class="ruler" aria-hidden="true">
-                        <span>0 cm</span>
-                        <span>15 cm</span>
-                        <span>30 cm</span>
-                    </div>
-                    <div class="measurement-panel">
-                        <div class="measurement-row">
-                            <span>Frame measurement</span>
-                            <strong>8.6 cm</strong>
-                        </div>
-                        <div class="measurement-row">
-                            <span>Depth profile</span>
-                            <span class="measure-tag">AR + Depth</span>
-                        </div>
-                        <div class="measurement-row">
-                            <span>Patient note</span>
-                            <span>Follow-up ready</span>
-                        </div>
-                    </div>
-                </div>
-            </aside>
         </section>
 
-        <section class="section tutorial" id="tutorial">
+        <section class="section-shell split" id="guide">
+            <div class="section-kicker active" data-lang-panel="en">Core workflow</div>
+            <div class="section-kicker" data-lang-panel="zh">核心流程</div>
             <div class="section-head">
-                <div data-lang-panel="en" class="active">
-                    <p class="eyebrow">Tutorial</p>
-                    <h2>How to use WoundTruth.</h2>
-                </div>
-                <div data-lang-panel="zh">
-                    <p class="eyebrow">使用教程</p>
-                    <h2>如何使用创视迹。</h2>
-                </div>
-                <p data-lang-panel="en" class="active">Start with the disclaimer, then follow the patient, recording, playback, measurement, notes, and archive workflows below.</p>
-                <p data-lang-panel="zh">请先阅读免责声明，然后按病人档案、录像、回看测量、备注和导入导出流程操作。</p>
+                <h2 data-lang-panel="en" class="active">From patient profile to exportable record package.</h2>
+                <h2 data-lang-panel="zh">从患者建档，到可导出的完整记录包。</h2>
+                <p data-lang-panel="en" class="active">The app is designed around a repeatable clinical follow-up loop: profile, recording, review, measurement, notes, and archive.</p>
+                <p data-lang-panel="zh">应用围绕可重复的临床随访流程设计：建档、录像、回看、测量、备注和归档。</p>
             </div>
 
-            <div class="tutorial-stack active" data-lang-panel="en">
-                <article class="guide-card warning">
-                    <span class="step-index">01</span>
-                    <div>
-                        <h3>Disclaimer</h3>
-                        <p>WoundTruth is a wound documentation and measurement aid for clinicians. It does not provide diagnosis, treatment recommendations, treatment decisions, or automated medical conclusions.</p>
-                        <p>All measurement results are for clinical reference only. Accuracy may be affected by device depth capability, camera distance, lighting, reflection, occlusion, motion blur, wound boundary selection, and whether ruler points are placed on the same physical plane as the measured wound area. Qualified healthcare professionals must use their own clinical judgment.</p>
-                    </div>
+            <div class="workflow-grid">
+                <article class="workflow-card">
+                    <span>01</span>
+                    <h3 data-lang-panel="en" class="active">Set defaults</h3>
+                    <h3 data-lang-panel="zh">设置默认信息</h3>
+                    <p data-lang-panel="en" class="active">Configure default hospital and department. These fields are optional and can be edited for each patient later.</p>
+                    <p data-lang-panel="zh">可设置默认医院和默认科室。这两项不是必填项，后续也可针对单个患者修改。</p>
+                    <img src="assets/guide-images/3_default_hospital.png" alt="Settings page">
                 </article>
 
-                <article class="guide-card">
-                    <span class="step-index">02</span>
-                    <div>
-                        <h3>Device and data requirements</h3>
-                        <p>Recording uses ARKit world tracking and depth data. A device with ARKit support and scene depth/LiDAR capability is recommended. Unsupported devices show an in-app message.</p>
-                        <p>The app is local-first. Patient records, frames, depth maps, camera metadata, measurements, notes, timestamps, and verification hashes stay on the device unless the user exports a record package.</p>
-                    </div>
+                <article class="workflow-card">
+                    <span>02</span>
+                    <h3 data-lang-panel="en" class="active">Create patient</h3>
+                    <h3 data-lang-panel="zh">创建患者档案</h3>
+                    <p data-lang-panel="en" class="active">Only patient name is required. Patient ID can be typed, scanned, or generated automatically.</p>
+                    <p data-lang-panel="zh">患者姓名是唯一必填项。患者 ID 可手动输入、扫码录入或自动生成。</p>
+                    <img src="assets/guide-images/4_new_patient.png" alt="New patient page">
                 </article>
 
-                <article class="guide-card">
-                    <span class="step-index">03</span>
-                    <div>
-                        <h3>Patient profile</h3>
-                        <ol>
-                            <li>Open Settings and set the default hospital and department if needed. These fields are optional.</li>
-                            <li>Create a new patient profile from the patient list.</li>
-                            <li>Enter the patient name. Patient ID is optional; if it is left empty, the app generates a timestamp-based ID.</li>
-                            <li>Fill optional hospital, department, and patient notes.</li>
-                            <li>Long-press a patient item to edit patient information later.</li>
-                        </ol>
-                    </div>
+                <article class="workflow-card">
+                    <span>03</span>
+                    <h3 data-lang-panel="en" class="active">Record AR video</h3>
+                    <h3 data-lang-panel="zh">录制 AR 创面视频</h3>
+                    <p data-lang-panel="en" class="active">Adjust A-B vertical and C-D horizontal reference lines on the same physical plane as the wound area, then record steadily.</p>
+                    <p data-lang-panel="zh">将 A-B 纵向参考线和 C-D 横向参考线放在与创面相同或近似相同的物理平面，再稳定录像。</p>
+                    <img src="assets/guide-images/6_record.PNG" alt="AR recording view">
                 </article>
 
-                <article class="guide-card">
-                    <span class="step-index">04</span>
-                    <div>
-                        <h3>Recording</h3>
-                        <ol>
-                            <li>Open a patient profile and start a new recording.</li>
-                            <li>Drag ruler points A-B and C-D to the reference area before recording.</li>
-                            <li>Place A-B and C-D on the same physical plane as the wound or measured object, for example on the same arm surface.</li>
-                            <li>The A-B and C-D lengths are used to display the two-axis ruler scale.</li>
-                            <li>Tap the record button and keep the camera stable. Avoid fast motion, poor lighting, strong reflection, and occlusion.</li>
-                        </ol>
-                    </div>
-                </article>
-
-                <article class="guide-card">
-                    <span class="step-index">05</span>
-                    <div>
-                        <h3>Playback and measurements</h3>
-                        <ol>
-                            <li>Open a recorded video and scrub the timeline to select a frame.</li>
-                            <li>Use the ruler overlay to understand the approximate scale of the current frame.</li>
-                            <li>Tap the measurement button and choose Length, Curve, Area, or Depth/Profile.</li>
-                            <li>Length measures the straight distance between two endpoints on the current frame.</li>
-                            <li>Curve follows a curved wound edge; tap Finish to calculate the curve length.</li>
-                            <li>Area follows the wound boundary; tap Finish to calculate the enclosed area.</li>
-                            <li>Depth/Profile places a line across the target area to view surface variation.</li>
-                            <li>After a measurement is completed, add a name or note if needed.</li>
-                            <li>Tap the measurement list in the lower-right corner to review all measurements and jump to the frame where a measurement was created.</li>
-                        </ol>
-                    </div>
-                </article>
-
-                <article class="guide-card">
-                    <span class="step-index">06</span>
-                    <div>
-                        <h3>Depth overlay, capture time, and hash verification</h3>
-                        <p>In playback, the user can toggle depth overlay, capture time, and HASH verification information. The depth overlay helps reviewers understand available depth data. Capture time and HASH values help verify that exported data matches the recorded data.</p>
-                    </div>
-                </article>
-
-                <article class="guide-card">
-                    <span class="step-index">07</span>
-                    <div>
-                        <h3>Notes and archives</h3>
-                        <p>Notes can be added at the patient, recording, and measurement levels. Recording notes can describe follow-up status, for example “wound condition after the third dressing change.”</p>
-                        <p>The app supports exporting and importing compatible record packages for archiving, computer transfer, or clinician consultation. Exported files may contain patient-identifiable information, so users should choose a secure destination.</p>
-                    </div>
+                <article class="workflow-card">
+                    <span>04</span>
+                    <h3 data-lang-panel="en" class="active">Review and measure</h3>
+                    <h3 data-lang-panel="zh">回看与测量</h3>
+                    <p data-lang-panel="en" class="active">Scrub to a frame, inspect the ruler, measure length, curve, area, or profile, and add notes.</p>
+                    <p data-lang-panel="zh">拖动到指定帧，观察标尺，完成长度、曲线、面积或剖面测量，并添加备注。</p>
+                    <img src="assets/guide-images/9_length.png" alt="Length measurement">
                 </article>
             </div>
+        </section>
 
-            <div class="tutorial-stack" data-lang-panel="zh">
-                <article class="guide-card warning">
-                    <span class="step-index">01</span>
+        <section class="section-shell" id="measurements">
+            <div class="section-head stacked">
+                <p class="eyebrow compact active" data-lang-panel="en">Frame-level measurement tools</p>
+                <p class="eyebrow compact" data-lang-panel="zh">单帧测量工具</p>
+                <h2 data-lang-panel="en" class="active">Choose the measurement that matches the wound question.</h2>
+                <h2 data-lang-panel="zh">根据创面观察问题，选择对应测量方式。</h2>
+            </div>
+
+            <div class="measurement-gallery">
+                <article class="measurement-card">
+                    <img src="assets/guide-images/9_length.png" alt="Length measurement">
                     <div>
-                        <h3>免责声明</h3>
-                        <p>WoundTruth / 创视迹是面向医护人员的创面记录与测量辅助工具，不提供诊断、治疗建议、治疗决策或自动化医疗结论。</p>
-                        <p>所有测量结果仅供临床参考。测量精度可能受到设备深度能力、拍摄距离、光照、反光、遮挡、运动模糊、创面边界选择，以及标尺点是否与创面位于同一物理平面等因素影响。具备资质的医护人员需要结合实际临床情况自行判断。</p>
+                        <h3 data-lang-panel="en" class="active">Length</h3>
+                        <h3 data-lang-panel="zh">长度</h3>
+                        <p data-lang-panel="en" class="active">Press and drag from the start point to the end point to measure wound length, width, or any straight-line distance.</p>
+                        <p data-lang-panel="zh">按住并从起点拖动到终点，用于测量创口长、宽或任意两点直线距离。</p>
                     </div>
                 </article>
-
-                <article class="guide-card">
-                    <span class="step-index">02</span>
+                <article class="measurement-card">
+                    <img src="assets/guide-images/10_curve.PNG" alt="Curve measurement">
                     <div>
-                        <h3>设备与数据要求</h3>
-                        <p>录像功能基于 ARKit 世界追踪和深度数据。建议使用支持 ARKit 与 scene depth/LiDAR 深度能力的设备。不支持的设备会在应用内显示明确提示。</p>
-                        <p>应用采用本地优先设计。患者档案、图像帧、深度图、相机元数据、测量结果、备注、拍摄时间和 HASH 信息默认保存在本机；只有用户主动导出数据包时，数据才会离开设备。</p>
+                        <h3 data-lang-panel="en" class="active">Curve</h3>
+                        <h3 data-lang-panel="zh">曲线</h3>
+                        <p data-lang-panel="en" class="active">Trace a wound margin or irregular boundary, then finish to calculate curved edge length.</p>
+                        <p data-lang-panel="zh">沿创面边缘或不规则边界拖动，完成后计算边缘曲线长度。</p>
                     </div>
                 </article>
-
-                <article class="guide-card">
-                    <span class="step-index">03</span>
+                <article class="measurement-card">
+                    <img src="assets/guide-images/11_area.png" alt="Area measurement">
                     <div>
-                        <h3>病人档案</h3>
-                        <ol>
-                            <li>打开设置，如有需要，填写默认医院和默认科室。这两项不是必填项。</li>
-                            <li>回到患者列表，新建病人档案。</li>
-                            <li>填写患者姓名。患者 ID 不是必填项；如果留空，应用会根据当前时间戳自动生成。</li>
-                            <li>可继续填写医院、科室和患者备注等可选信息。</li>
-                            <li>在患者列表中长按对应患者，可以后续编辑病人信息。</li>
-                        </ol>
+                        <h3 data-lang-panel="en" class="active">Area</h3>
+                        <h3 data-lang-panel="zh">面积</h3>
+                        <p data-lang-panel="en" class="active">Trace around the wound boundary. The path closes automatically and the selected area is calculated.</p>
+                        <p data-lang-panel="zh">沿创面边界拖动，路径自动闭合后计算所选区域面积。</p>
                     </div>
                 </article>
-
-                <article class="guide-card">
-                    <span class="step-index">04</span>
+                <article class="measurement-card">
+                    <img src="assets/guide-images/12_profile.png" alt="Depth profile measurement">
                     <div>
-                        <h3>录像</h3>
-                        <ol>
-                            <li>进入某个病人档案，开始新建录像。</li>
-                            <li>录像前拖动 A-B、C-D 四个标尺点到指定参考位置。</li>
-                            <li>A-B 和 C-D 应尽量放在与创面或待测物体相同的物理平面上，例如都放在同一段胳膊表面。</li>
-                            <li>A-B 和 C-D 的长度会用于显示横向与纵向两个轴的标尺。</li>
-                            <li>点击录像按钮后保持手机稳定，避免快速移动、光照不足、强反光和遮挡。</li>
-                        </ol>
-                    </div>
-                </article>
-
-                <article class="guide-card">
-                    <span class="step-index">05</span>
-                    <div>
-                        <h3>回看与测量</h3>
-                        <ol>
-                            <li>打开已录制的视频，拖动时间轴选择需要查看或测量的某一帧。</li>
-                            <li>使用默认标尺叠加层观察当前帧的大致尺度。</li>
-                            <li>点击测量按钮，选择直线、曲线、面积或深度/剖面。</li>
-                            <li>直线用于测量当前帧两个端点之间的直线距离。</li>
-                            <li>曲线用于沿创面边缘连续点选或拖动，完成后点击完成按钮计算曲线长度。</li>
-                            <li>面积用于沿创面边界连续点选或拖动，完成后点击完成按钮计算封闭区域面积。</li>
-                            <li>深度/剖面用于在目标区域放置剖面线，查看深度曲线和表面起伏。</li>
-                            <li>完成测量后，可给测量添加名称或备注。</li>
-                            <li>点击右下角测量列表，可以查看全部测量项，并跳转到对应测量所在的帧。</li>
-                        </ol>
-                    </div>
-                </article>
-
-                <article class="guide-card">
-                    <span class="step-index">06</span>
-                    <div>
-                        <h3>深度图、拍摄时间与 HASH 防伪信息</h3>
-                        <p>回看界面支持切换深度图叠加、拍摄时间和 HASH 校验信息。深度图用于帮助理解当前帧可用的深度数据；拍摄时间和 HASH 值用于辅助确认导出数据与原始记录是否一致。</p>
-                    </div>
-                </article>
-
-                <article class="guide-card">
-                    <span class="step-index">07</span>
-                    <div>
-                        <h3>备注与导入导出</h3>
-                        <p>应用支持病人、录像、测量三个层级的备注。录像备注可以记录某次随访或换药后的创面状态，例如“第三次换药后伤口状况”。</p>
-                        <p>应用支持导出和导入兼容的数据包，用于电脑归档、离线备份或医生之间会诊传输。导出文件可能包含可识别患者身份的信息，用户需要自行选择安全、合规的保存或传输方式。</p>
+                        <h3 data-lang-panel="en" class="active">Depth Profile</h3>
+                        <h3 data-lang-panel="zh">剖面</h3>
+                        <p data-lang-panel="en" class="active">Place a cross-section line to view surface variation, including raised or depressed areas, using available depth data.</p>
+                        <p data-lang-panel="zh">放置剖面线，基于可用深度数据查看局部凸起、凹陷和表面起伏。</p>
                     </div>
                 </article>
             </div>
         </section>
 
-        <section class="section" id="features">
-            <div class="section-head">
-                <div data-lang-panel="en" class="active">
-                    <h2>Designed for clinical follow-up, not casual snapshots.</h2>
-                </div>
-                <div data-lang-panel="zh">
-                    <h2>为临床随访设计，不只是拍一张照片。</h2>
-                </div>
-                <p data-lang-panel="en" class="active">Each recording can include patient context, frame metadata, depth maps, camera information, measurements, notes, and exportable archives.</p>
-                <p data-lang-panel="zh">每次录制都可以包含患者信息、逐帧元数据、深度图、相机信息、测量结果、备注，以及可导出的归档数据包。</p>
+        <section class="section-shell two-column">
+            <div class="info-panel">
+                <p class="eyebrow compact active" data-lang-panel="en">Reference ruler logic</p>
+                <p class="eyebrow compact" data-lang-panel="zh">参考标尺逻辑</p>
+                <h2 data-lang-panel="en" class="active">A-B controls vertical scale. C-D controls horizontal scale.</h2>
+                <h2 data-lang-panel="zh">A-B 负责纵向刻度，C-D 负责横向刻度。</h2>
+                <p data-lang-panel="en" class="active">A-B is the vertical reference line used to calculate the y-axis ruler scale. C-D is the horizontal reference line used to calculate the x-axis ruler scale. For better consistency, place both on the same physical plane as the wound or measured surface.</p>
+                <p data-lang-panel="zh">A-B 是纵向参考线，用于计算画面纵坐标方向的标尺刻度；C-D 是横向参考线，用于计算画面横坐标方向的标尺刻度。为提高一致性，应尽量将二者放在与创面或待测表面相同的物理平面上。</p>
+            </div>
+            <div class="phone-frame inline-shot">
+                <img src="assets/guide-images/8_review_display.png" alt="A-B and C-D ruler reference in playback">
+            </div>
+        </section>
+
+        <section class="section-shell">
+            <div class="section-head stacked">
+                <p class="eyebrow compact active" data-lang-panel="en">Review, verify, annotate</p>
+                <p class="eyebrow compact" data-lang-panel="zh">回看、核验、备注</p>
+                <h2 data-lang-panel="en" class="active">Measurements stay linked to frames, notes, and verification context.</h2>
+                <h2 data-lang-panel="zh">测量结果关联帧、备注和核验信息。</h2>
             </div>
 
-            <div class="grid">
-                <article class="card">
-                    <h3 data-lang-panel="en" class="active">AR video and depth capture</h3>
-                    <h3 data-lang-panel="zh">AR 录像与深度采集</h3>
-                    <p data-lang-panel="en" class="active">Capture color frames, depth data, camera intrinsics, transforms, and display mapping information for later review and measurement.</p>
-                    <p data-lang-panel="zh">记录彩色图像、深度数据、相机内参、位姿变换和显示映射信息，为后续回看和测量保留依据。</p>
+            <div class="feature-strip">
+                <article>
+                    <img src="assets/guide-images/13_list_and_jump.png" alt="Measurement list and jump">
+                    <h3 data-lang-panel="en" class="active">Measurement list and jump</h3>
+                    <h3 data-lang-panel="zh">测量列表与跳转</h3>
+                    <p data-lang-panel="en" class="active">Open the measurement list, review notes, and jump directly to the frame where a measurement was created.</p>
+                    <p data-lang-panel="zh">打开测量列表，查看备注，并快速跳转到对应测量所在帧。</p>
                 </article>
-
-                <article class="card">
-                    <h3 data-lang-panel="en" class="active">Patient and record notes</h3>
-                    <h3 data-lang-panel="zh">患者与录像备注</h3>
-                    <p data-lang-panel="en" class="active">Add notes at the patient, recording, and measurement levels to document wound history and dressing-change progress.</p>
-                    <p data-lang-panel="zh">支持在患者、单次录像、单项测量三个层级添加备注，便于记录病因、换药进展和测量说明。</p>
+                <article>
+                    <img src="assets/guide-images/14_depth_overlay.png" alt="Depth overlay and hash information">
+                    <h3 data-lang-panel="en" class="active">Depth, time, and hash overlay</h3>
+                    <h3 data-lang-panel="zh">深度图、时间与 HASH</h3>
+                    <p data-lang-panel="en" class="active">Toggle depth overlay, capture time, and frame hash information for record verification.</p>
+                    <p data-lang-panel="zh">可叠加显示深度图、拍摄时间和帧 HASH 信息，用于辅助记录核验。</p>
                 </article>
-
-                <article class="card">
-                    <h3 data-lang-panel="en" class="active">Frame-level measurements</h3>
-                    <h3 data-lang-panel="zh">单帧精细测量</h3>
-                    <p data-lang-panel="en" class="active">Measure line length, curved edges, area, and depth profile on selected frames with visual overlays for review.</p>
-                    <p data-lang-panel="zh">在选定帧上进行长度、曲线、面积和剖面测量，并通过可视化标注辅助复核。</p>
+                <article>
+                    <img src="assets/guide-images/5_press_on_patient.png" alt="Long press patient archive menu">
+                    <h3 data-lang-panel="en" class="active">Export archives</h3>
+                    <h3 data-lang-panel="zh">导出档案</h3>
+                    <p data-lang-panel="en" class="active">Long-press a patient to edit notes or export a patient archive for backup, computer transfer, or consultation.</p>
+                    <p data-lang-panel="zh">长按患者可编辑备注或导出患者档案，用于备份、电脑归档或会诊交流。</p>
                 </article>
             </div>
         </section>
 
-        <section class="section">
-            <div class="section-head">
-                <div data-lang-panel="en" class="active">
-                    <h2>Data package first.</h2>
-                </div>
-                <div data-lang-panel="zh">
-                    <h2>以完整数据包为核心。</h2>
-                </div>
-                <p data-lang-panel="en" class="active">WoundTruth is built around local control and exportable records, so clinicians can archive cases or transfer them for consultation.</p>
-                <p data-lang-panel="zh">创视迹以本地控制和可导出档案为核心，方便医生归档病例，也方便会诊时传输数据。</p>
+        <section class="section-shell data-section">
+            <div>
+                <p class="eyebrow compact active" data-lang-panel="en">Local-first data package</p>
+                <p class="eyebrow compact" data-lang-panel="zh">本地优先的数据包</p>
+                <h2 data-lang-panel="en" class="active">What can be stored and exported?</h2>
+                <h2 data-lang-panel="zh">应用会保存和导出哪些信息？</h2>
+            </div>
+            <div class="data-grid">
+                <div data-lang-panel="en" class="active">Patient metadata and notes</div>
+                <div data-lang-panel="zh">患者信息与备注</div>
+                <div data-lang-panel="en" class="active">AR image frames and depth maps</div>
+                <div data-lang-panel="zh">AR 图像帧与深度图</div>
+                <div data-lang-panel="en" class="active">Camera metadata and ruler calibration</div>
+                <div data-lang-panel="zh">相机元数据与标尺换算信息</div>
+                <div data-lang-panel="en" class="active">Measurements and measurement notes</div>
+                <div data-lang-panel="zh">测量结果与测量备注</div>
+                <div data-lang-panel="en" class="active">Capture time and hash verification data</div>
+                <div data-lang-panel="zh">拍摄时间与 HASH 校验信息</div>
+                <div data-lang-panel="en" class="active">Compatible import/export packages</div>
+                <div data-lang-panel="zh">兼容的导入/导出数据包</div>
+            </div>
+        </section>
+
+        <section class="section-shell faq" id="faq">
+            <div class="section-head stacked">
+                <p class="eyebrow compact">FAQ</p>
+                <h2 data-lang-panel="en" class="active">Common questions before clinical use.</h2>
+                <h2 data-lang-panel="zh">临床使用前的常见问题。</h2>
             </div>
 
-            <div class="card spec-list">
-                <div class="spec">
-                    <strong data-lang-panel="en" class="active">Patient archive</strong>
-                    <strong data-lang-panel="zh">患者档案</strong>
-                    <span data-lang-panel="en" class="active">Name, patient ID, optional hospital and department, patient-level notes, and linked recordings.</span>
-                    <span data-lang-panel="zh">包含姓名、患者 ID、可选医院与科室、患者层级备注，以及关联录像。</span>
-                </div>
-                <div class="spec">
-                    <strong data-lang-panel="en" class="active">Recording package</strong>
-                    <strong data-lang-panel="zh">录像数据包</strong>
-                    <span data-lang-panel="en" class="active">Video frames, metadata, camera information, depth files, ruler calibration, and record notes.</span>
-                    <span data-lang-panel="zh">包含视频帧、元数据、相机信息、深度文件、标尺校准和录像备注。</span>
-                </div>
-                <div class="spec">
-                    <strong data-lang-panel="en" class="active">Measurement history</strong>
-                    <strong data-lang-panel="zh">测量历史</strong>
-                    <span data-lang-panel="en" class="active">Line, curve, area, and profile measurements can be reviewed, named, annotated, and jumped to from the playback timeline.</span>
-                    <span data-lang-panel="zh">长度、曲线、面积和剖面测量可回看、命名、备注，并能从回放时间线快速跳转。</span>
-                </div>
-            </div>
-
-            <div class="callout active" data-lang-panel="en">
-                WoundTruth is a documentation and measurement aid. It is not intended to replace clinical judgment, diagnosis, or treatment decisions.
-            </div>
-            <div class="callout" data-lang-panel="zh">
-                创视迹是临床记录与测量辅助工具，不能替代医生的诊断、判断或治疗决策。
+            <div class="faq-grid">
+                <article>
+                    <h3 data-lang-panel="en" class="active">Does WoundTruth upload patient data?</h3>
+                    <h3 data-lang-panel="zh">应用是否上传患者数据？</h3>
+                    <p data-lang-panel="en" class="active">No by default. Records stay on device unless the user manually exports or shares a package through iOS system actions.</p>
+                    <p data-lang-panel="zh">默认不会。数据保存在本机，只有用户主动导出或分享数据包时才会离开设备。</p>
+                </article>
+                <article>
+                    <h3 data-lang-panel="en" class="active">Why does iOS ask for wireless data?</h3>
+                    <h3 data-lang-panel="zh">为什么 iOS 会提示无线数据权限？</h3>
+                    <p data-lang-panel="en" class="active">Core features run locally. Wireless data is only needed when the user opens support, tutorial, or privacy policy links.</p>
+                    <p data-lang-panel="zh">核心功能本地运行。无线数据权限主要用于用户主动打开教程、支持网站或隐私政策链接。</p>
+                </article>
+                <article>
+                    <h3 data-lang-panel="en" class="active">Why can measurements differ from a physical ruler?</h3>
+                    <h3 data-lang-panel="zh">为什么测量值可能和物理尺不同？</h3>
+                    <p data-lang-panel="en" class="active">Depth quality, reference line placement, perspective, lighting, reflection, motion, and boundary selection can affect results.</p>
+                    <p data-lang-panel="zh">深度图质量、参考线位置、透视角度、光照、反光、运动和边界选择都会影响测量结果。</p>
+                </article>
+                <article>
+                    <h3 data-lang-panel="en" class="active">Can archives move between devices?</h3>
+                    <h3 data-lang-panel="zh">数据包可以跨设备使用吗？</h3>
+                    <p data-lang-panel="en" class="active">Yes. Compatible packages can be imported on another device, such as recording on iPhone and reviewing on iPad.</p>
+                    <p data-lang-panel="zh">可以。兼容数据包可导入另一台设备，例如在 iPhone 录制后导入 iPad 回看。</p>
+                </article>
             </div>
         </section>
     </main>
 
     <footer class="footer">
         <div class="footer-inner">
-            <span>© 2026 WoundTruth. Developer: zhituo.xia</span>
+            <div>
+                <strong data-brand-name>WoundTruth</strong>
+                <p data-lang-panel="en" class="active">A local-first wound documentation and measurement aid. Not a diagnostic or treatment device.</p>
+                <p data-lang-panel="zh">本地优先的创面记录与测量辅助工具，不是诊断或治疗设备。</p>
+            </div>
             <nav>
                 <a href="support.html">Support</a>
                 <a href="privacy.html">Privacy</a>
-                <a href="mailto:xiazhituo@gmail.com">xiazhituo@gmail.com</a>
+                <a href="mailto:xiazhituo@gmail.com">Contact</a>
             </nav>
         </div>
     </footer>
